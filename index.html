@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cssChange.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <img class="logo-img" src="img/logo.png" alt="Logo">
+                    <h1>С помощью нас<br>вы сможете создать то, о чем</h1>
+                    <h2 class="bigger-text">желаете!</h2>
+                    <p>Наши возможности + опыт позволят Вам достичь огромного успеха. Мы верим в вас! И знаем это на все 100%. Вас не остановить!</p>
+                    <button class="header-button animate__animated animate__heartBeat animate__infinite">Узнать больше...</button>
+                </div>
+                <div class="header-image animate__animated animate__bounce animate__infinite">
+                    <img src="img/header-img.png" alt="App Image">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="services">
+        <div class="container">
+            <h2>Что Вам необходимо?</h2>
+            <div class="service-blocks">
+                <div class="service-block">
+                    <img src="img/f3.png" alt="Icon 1">
+                    <h3>Первый блок</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-block">
+                    <img src="img/f4.png" alt="Icon 2">
+                    <h3>Второй блок</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="service-block">
+                    <img src="img/f5.png" alt="Icon 3">
+                    <h3>Третий блок</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="order-form">
+        <div class="container">
+            <h2>Форма заказа продукта</h2>
+            <form class="order-grid" id="productOrderForm" novalidate>
+                <div id="errorSummary" class="error-summary" style="grid-column: 1 / -1;"></div>
+                
+                <div class="order-info">
+                    <h3>Информация о заказе</h3>
+                    
+                    <div class="form-group">
+                        <input type="text" name="first-name" id="firstName" placeholder="Имя*">
+                        <div id="firstNameError" class="error-message">Пожалуйста, введите имя (2-30 букв)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" name="last-name" id="lastName" placeholder="Фамилия*">
+                        <div id="lastNameError" class="error-message">Пожалуйста, введите фамилию (2-30 букв)</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" name="phone" id="phone" placeholder="Телефон*">
+                        <div id="phoneError" class="error-message">Формат: +7 (123) 456-78-90</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <select name="product" id="product" required>
+                            <option value="" disabled selected>Выберите продукт*</option>
+                            <option value="product1">Продукт 1</option>
+                            <option value="product2">Продукт 2</option>
+                            <option value="product3">Продукт 3</option>
+                        </select>
+                        <div id="productError" class="error-message">Пожалуйста, выберите продукт</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="date" name="delivery-date" id="deliveryDate">
+                        <div id="dateError" class="error-message">Пожалуйста, выберите дату</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="number" name="quantity" id="quantity" placeholder="Количество*" min="1" max="10">
+                        <div id="quantityError" class="error-message">Введите количество от 1 до 10</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="payment-methods">
+                            <p><strong>Способ оплаты:*</strong></p>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="cash">
+                                <span>Наличные</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="card">
+                                <span>Карта</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="payment" value="online">
+                                <span>Онлайн</span>
+                            </label>
+                        </div>
+                        <div id="paymentError" class="error-message">Пожалуйста, выберите способ оплаты</div>
+                    </div>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Сводка заказа</h3>
+                    <div class="summary-content">
+                        <p><strong>Имя:</strong> <span id="summaryFirstName">-</span></p>
+                        <p><strong>Фамилия:</strong> <span id="summaryLastName">-</span></p>
+                        <p><strong>Телефон:</strong> <span id="summaryPhone">-</span></p>
+                        <p><strong>Продукт:</strong> <span id="summaryProduct">-</span></p>
+                        <p><strong>Дата доставки:</strong> <span id="summaryDate">-</span></p>
+                        <p><strong>Количество:</strong> <span id="summaryQuantity">-</span></p>
+                        <p><strong>Способ оплаты:</strong> <span id="summaryPayment">-</span></p>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-order">Отправить заказ</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="contact-form">
+        <div class="container">
+            <h2>Форма заказа обратного звонка</h2>
+            <form>
+                <input type="text" name="name" placeholder="Имя" required minlength="2" maxlength="30" pattern="[А-Яа-яЁёA-Za-z\s]+" title="Пожалуйста, введите только буквы">
+                <input type="email" name="email" placeholder="Введите ваш Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Пожалуйста, введите корректный email (например: example@mail.com)">
+                <input type="tel" name="phone" placeholder="Телефон" required pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="Формат: +7 (123) 456-78-90">
+                <input type="text" name="message" placeholder="Какая тема вас интересует?" required minlength="5" maxlength="200">
+                <button type="submit">Отправить вопрос!</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© Все на этом сайте вымышлено</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,46 @@
+Использование классов библиотеки: 
+    <button class="header-button animate__animated animate__heartBeat animate__infinite	infinite">Узнать больше...</button>
+    <div class="header-image animate__animated animate__bounce animate__infinite	infinite" >
+
+Использование @keyframes:
+    .service-blocks img {
+    animation: bounceInUp;
+    animation-duration: 2s;
+}
+
+.contact-form h2 {
+    animation: rotateIn;
+    animation-duration: 2s;
+}
+
+
+Использование transitions:
+    .contact-form button {
+    background-color: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    width: 300px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #e67e22;
+    color: white;
+    transform: scale(1.05);
+}
+
+.header-text h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    margin-top: -20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header-text h1:hover {
+    color: #f1c40f;
+    transform: translateX(10px);
+}
